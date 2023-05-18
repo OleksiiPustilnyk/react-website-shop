@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import './style.css'
 
 // React Element
 
@@ -24,11 +25,14 @@ import ReactDOM from 'react-dom/client'
 
 // Компоненти
 
-const App = () => {
+const Title = () => {
+    return <h1>Hello App component</h1>
+}
+
+const Content = () => {
     return (
-        <div>
-            <h1>Hello App component</h1>
-            <p>
+        <React.Fragment>
+            <p className="red">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
                 consequuntur itaque consequatur reiciendis nulla vero officia
                 ipsam iusto esse rem, temporibus libero ullam vitae cupiditate
@@ -40,7 +44,16 @@ const App = () => {
                 laboriosam incidunt, amet quis et quos earum molestiae
                 aspernatur aut labore! Et!
             </p>
-        </div>
+        </React.Fragment>
+    )
+}
+
+const App = () => {
+    return (
+        <>
+            <Title />
+            <Content />
+        </>
     )
 }
 
