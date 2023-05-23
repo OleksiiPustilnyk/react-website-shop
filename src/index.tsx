@@ -25,7 +25,7 @@ import './style.css'
 
 // Компоненти
 
-interface TitleProps {
+type TitleProps = {
     title: string
 }
 
