@@ -25,8 +25,12 @@ import './style.css'
 
 // Компоненти
 
-const Title = () => {
-    return <h1>Hello App component</h1>
+interface TitleProps {
+    title: string
+}
+
+const Title = (props: TitleProps) => {
+    return <h1>Hello {props.title} component</h1>
 }
 
 const Content = () => {
@@ -51,7 +55,8 @@ const Content = () => {
 const App = () => {
     return (
         <>
-            <Title />
+            <Title title="App" />
+            <Title title="React" />
             <Content />
         </>
     )
