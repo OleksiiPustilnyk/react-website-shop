@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './style.css'
+import Title from './Title'
 
 // React Element
 
@@ -24,19 +25,6 @@ import './style.css'
 // для того щоб викликати // React Element і // JSX треба вставити в root.render(<React.StrictMode>{const назва}</React.StrictMode>
 
 // Компоненти
-
-type TitleProps = {
-    title: string
-    number?: number
-}
-
-const Title = ({ title, number = 5 }: TitleProps) => {
-    return (
-        <h1>
-            Hello {title} {number}
-        </h1>
-    )
-}
 
 const Content = () => {
     return (
