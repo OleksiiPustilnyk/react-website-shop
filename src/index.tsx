@@ -27,10 +27,15 @@ import './style.css'
 
 type TitleProps = {
     title: string
+    number?: number
 }
 
-const Title = ({ title }: TitleProps) => {
-    return <h1>Hello {title} component</h1>
+const Title = ({ title, number = 5 }: TitleProps) => {
+    return (
+        <h1>
+            Hello {title} {number}
+        </h1>
+    )
 }
 
 const Content = () => {
@@ -56,7 +61,7 @@ const App = () => {
     return (
         <>
             <Title title="App" />
-            <Title title="React" />
+            <Title title="React" number={2} />
             <Content />
         </>
     )
