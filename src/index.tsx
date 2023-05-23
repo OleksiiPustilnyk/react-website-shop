@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './style.css'
 import Title from './Title'
+import { Content } from './Content'
 
 // React Element
 
@@ -26,31 +27,15 @@ import Title from './Title'
 
 // Компоненти
 
-const Content = () => {
-    return (
-        <React.Fragment>
-            <p className="red">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-                consequuntur itaque consequatur reiciendis nulla vero officia
-                ipsam iusto esse rem, temporibus libero ullam vitae cupiditate
-                ipsa quam blanditiis expedita enim?
-            </p>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
-                at distinctio, vero officia aliquid iusto eos placeat omnis
-                laboriosam incidunt, amet quis et quos earum molestiae
-                aspernatur aut labore! Et!
-            </p>
-        </React.Fragment>
-    )
-}
-
 const App = () => {
     return (
         <>
             <Title title="App" />
             <Title title="React" number={2} />
-            <Content />
+            <Content
+                text1="blablbalbablablbalbablablbalbablablbalbablablbalbablablbalba"
+                text2="blablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbaß"
+            />
         </>
     )
 }
