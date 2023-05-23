@@ -1,8 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './style.css'
-import Title from './Title'
-import { Content } from './Content'
+import App from 'Container/App/App'
 
 // React Element
 
@@ -26,19 +24,6 @@ import { Content } from './Content'
 // для того щоб викликати // React Element і // JSX треба вставити в root.render(<React.StrictMode>{const назва}</React.StrictMode>
 
 // Компоненти
-
-const App = () => {
-    return (
-        <>
-            <Title title="App" />
-            <Title title="React" number={2} />
-            <Content
-                text1="blablbalbablablbalbablablbalbablablbalbablablbalbablablbalba"
-                text2="blablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbablablbalbaß"
-            />
-        </>
-    )
-}
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
