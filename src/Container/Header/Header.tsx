@@ -11,8 +11,14 @@ import './Header.scss'
 type Props = {}
 
 const Header = (props: Props) => {
+    const appBar = true
     return (
-        <AppBar position="static">
+        <AppBar
+            position="static"
+            className="app-bar"
+            // sx={{ backgroundColor: 'green' }} // 1 спосіб змінити колір header
+            style={{ backgroundColor: appBar ? 'green' : 'purple' }} // 2 спосіб змінити колір header (можна задавати змінну)
+        >
             <Container>
                 <Toolbar>
                     <IconButton
