@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './style.css'
+import App from 'Container/App/App'
 
 // React Element
 
@@ -24,38 +24,6 @@ import './style.css'
 // для того щоб викликати // React Element і // JSX треба вставити в root.render(<React.StrictMode>{const назва}</React.StrictMode>
 
 // Компоненти
-
-const Title = () => {
-    return <h1>Hello App component</h1>
-}
-
-const Content = () => {
-    return (
-        <React.Fragment>
-            <p className="red">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-                consequuntur itaque consequatur reiciendis nulla vero officia
-                ipsam iusto esse rem, temporibus libero ullam vitae cupiditate
-                ipsa quam blanditiis expedita enim?
-            </p>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
-                at distinctio, vero officia aliquid iusto eos placeat omnis
-                laboriosam incidunt, amet quis et quos earum molestiae
-                aspernatur aut labore! Et!
-            </p>
-        </React.Fragment>
-    )
-}
-
-const App = () => {
-    return (
-        <>
-            <Title />
-            <Content />
-        </>
-    )
-}
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
