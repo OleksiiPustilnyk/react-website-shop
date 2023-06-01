@@ -17,7 +17,15 @@ function ProductList({}: Props) {
             </Typography>
             <Grid container spacing={4}>
                 {productsArray.map(
-                    ({ id, title, description, type, capacity, price }) => (
+                    ({
+                        image,
+                        id,
+                        title,
+                        description,
+                        type,
+                        capacity,
+                        price,
+                    }) => (
                         <Grid item xs={12} sm={6} md={4} key={id}>
                             <ProductListItem
                                 title={title}
@@ -25,6 +33,7 @@ function ProductList({}: Props) {
                                 type={type}
                                 capacity={capacity}
                                 price={price}
+                                image={image}
                             />
                         </Grid>
                     )
