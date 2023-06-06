@@ -28,6 +28,7 @@ const ProductListItem = ({
     image,
 }: Props) => {
     const [count, setCount] = useState<number>(1)
+    const [color, setColor] = useState<string>('green')
 
     const onIncrementClick = () => {
         setCount((prevState) => prevState + 1)
@@ -35,6 +36,10 @@ const ProductListItem = ({
 
     const onDecrementClick = () => {
         setCount((prevState) => prevState - 1)
+    }
+
+    const changeColor = () => {
+        setColor((prevState) => (prevState === 'green' ? 'red' : 'green'))
     }
 
     return (
@@ -47,6 +52,10 @@ const ProductListItem = ({
                 <p className="product-description">{description}</p>
                 <div className="product-features">Type: {type}</div>
                 <div className="product-features">{capacity}Gb</div>
+                <div>
+                    Color: <span className={`${color}`}>{color}</span>
+                </div>
+                <button onClick={() => changeColor()}>Change color</button>
                 <div className="product-price">$ {price}</div>
                 <div className="product-quantity">
                     <Button
