@@ -4,7 +4,7 @@ import productsArray from 'utils/productsArray'
 
 type Props = {}
 
-function ProductList({}: Props) {
+function ProductList(props: Props) {
     return (
         <>
             <Typography
