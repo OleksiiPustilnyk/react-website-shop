@@ -7,7 +7,6 @@ import {
 } from '@mui/material'
 
 import './ProductListItem.scss'
-// import { count } from 'console'
 import { useState } from 'react'
 
 type Props = {

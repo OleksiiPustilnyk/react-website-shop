@@ -9,17 +9,16 @@ import CartHeader from 'components/CartHeader/CartHeader'
 
 import './Header.scss'
 
-type Props = {}
+type Props = {
+    cartData: {
+        totalCount: number
+        totalPrice: number
+    }
+}
 
-const Header = (props: Props) => {
-    // const appBar = true // для 2 способу
+const Header = ({ cartData }: Props) => {
     return (
-        <AppBar
-            position="static"
-            className="app-bar"
-            // sx={{ backgroundColor: 'green' }} // 1 спосіб змінити колір header
-            // style={{ backgroundColor: appBar ? 'green' : 'purple' }} // 2 спосіб змінити колір header (можна задавати змінну)
-        >
+        <AppBar position="static" className="app-bar">
             <Container>
                 <Toolbar>
                     <IconButton
@@ -33,7 +32,7 @@ const Header = (props: Props) => {
                     </IconButton>
                     <Logo />
                     <Menu />
-                    <CartHeader />
+                    <CartHeader cartData={cartData} />
                 </Toolbar>
             </Container>
         </AppBar>
