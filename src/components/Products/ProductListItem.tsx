@@ -46,7 +46,7 @@ class ProductListItem extends React.Component<Props, State> {
             <Card className="product" variant="outlined">
                 <CardContent>
                     <div className="product-img">
-                        <img src={image} alt="image" />
+                        <img src={image} alt="title" />
                     </div>
                     <h4 className="product-title">{title}</h4>
                     <p className="product-description">{description}</p>
