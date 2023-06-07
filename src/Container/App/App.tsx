@@ -11,8 +11,8 @@ type CartData = {
 
 const App = () => {
     const [cartData, setCartData] = useState<CartData>({
-        totalCount: 10,
-        totalPrice: 100,
+        totalCount: 0,
+        totalPrice: 0,
     })
 
     return (
