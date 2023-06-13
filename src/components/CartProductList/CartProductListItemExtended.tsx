@@ -14,7 +14,7 @@ const CartProductListItemExtended = ({ product, productCount }: Props) => {
                     </div>
                     <div className="product-title">{product.title}</div>
                     <div className="product-features">
-                        Price for one item: {product.price}
+                        Price for one item: {product.price} $
                     </div>
                     <div className="product-features">
                         Count: {productCount}
