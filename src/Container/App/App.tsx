@@ -23,11 +23,16 @@ const App = () => {
             [id]: (prevState[id] || 0) + count,
         }))
     }
+
     return (
         <StyledEngineProvider injectFirst>
             <CssBaseline />
             <Header productsInCart={productsInCart} />
-            <Container sx={{ padding: '40px 0' }}>
+            <Container
+                sx={{
+                    padding: '40px 0',
+                }}
+            >
                 <Routes>
                     <Route
                         path="/"
