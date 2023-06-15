@@ -8,6 +8,7 @@ import {
 
 import './ProductListItem.scss'
 import { useState } from 'react'
+import Quantity from 'components/Quantity/Quantity'
 
 type Props = {
     id: number
@@ -52,21 +53,11 @@ const ProductListItem = ({
                 <div className="product-features">{capacity}Gb</div>
                 <div className="product-price">$ {price}</div>
                 <div className="product-quantity">
-                    <Button
-                        variant="outlined"
-                        onClick={() => onDecrementClick()}
-                        disabled={count <= 1}
-                    >
-                        -
-                    </Button>
-                    <TextField value={count} size="small" />
-                    <Button
-                        variant="outlined"
-                        onClick={() => onIncrementClick()}
-                        disabled={count >= 10}
-                    >
-                        +
-                    </Button>
+                    <Quantity
+                        count={count}
+                        onDecrementClick={onDecrementClick}
+                        onIncrementClick={onIncrementClick}
+                    />
                 </div>
                 <CardActions className="btn-wrap">
                     <Button
