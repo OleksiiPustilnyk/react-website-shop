@@ -1,14 +1,11 @@
 import { Card, CardContent, Grid, Button } from '@mui/material'
 import { Product } from 'utils/productsArray'
 import DeleteIcon from '@mui/icons-material/Delete'
-import { AppContext } from 'Container/App/App'
 import { useContext } from 'react'
+import { AppContext } from 'Container/App/App'
 import Quantity from 'components/Quantity/Quantity'
 
-type Props = {
-    product: Product
-    productCount: number
-}
+type Props = { product: Product; productCount: number }
 
 const CartProductListItemExtended = ({ product, productCount }: Props) => {
     const data = useContext(AppContext)
@@ -22,7 +19,7 @@ const CartProductListItemExtended = ({ product, productCount }: Props) => {
                     </div>
                     <div className="product-title">{product.title}</div>
                     <div className="product-features">
-                        Price for one item: {product.price} $
+                        Price for one item: {product.price}
                     </div>
                     <div className="product-features">
                         Count: {productCount}
@@ -30,10 +27,12 @@ const CartProductListItemExtended = ({ product, productCount }: Props) => {
                     <Quantity
                         count={productCount}
                         onDecrementClick={() =>
-                            data?.changeProductQuantity(
-                                product.id,
-                                productCount - 1
-                            )
+                            productCount === 1
+                                ? data?.removeProductFromCart(product.id)
+                                : data?.changeProductQuantity(
+                                      product.id,
+                                      productCount - 1
+                                  )
                         }
                         onIncrementClick={() =>
                             data?.changeProductQuantity(
@@ -41,6 +40,7 @@ const CartProductListItemExtended = ({ product, productCount }: Props) => {
                                 productCount + 1
                             )
                         }
+                        minCount={0}
                     />
                     <Button
                         variant="outlined"
