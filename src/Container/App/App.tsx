@@ -8,6 +8,7 @@ import { Container } from '@mui/material'
 import CartPage from 'pages/Cart/CartPage'
 import { createContext } from 'react'
 import { omit } from 'lodash'
+import CheckoutPage from 'pages/Checkout/CheckoutPage'
 
 type ProductsInCart = {
     [id: number]: number
@@ -69,6 +70,7 @@ const App = () => {
                                 <CartPage productsInCart={productsInCart} />
                             }
                         />
+                        <Route path="/checkout" element={<CheckoutPage />} />
                     </Routes>
                 </Container>
             </AppContext.Provider>
